@@ -1,0 +1,24 @@
+Circuit: * C:\Projects\circuits_rf\jfets\Fifth_JFET_AM.asc
+
+WARNING: Node OUT is floating.
+
+WARNING: Less than two connections to node OUT.  This node is used by C3.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Jan 10 07:09:07 2026
+Total elapsed time: 0.187 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 52265
+traniter = 52260
+tranpoints = 20006
+accept = 12010
+rejected = 7996
+matrix size = 12
+fillins = 3
+solver = Normal
+Matrix Compiler1: 658 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: off  [0.1]/0.1/0.1
+

@@ -1,0 +1,22 @@
+* C:\Projects\circuits_rf\diode_ring_modulator\diode_ring_modulator_2.asc
+L1 0 RFIn 0.9m
+L2 0 P001 2m
+L3 P002 0 2m
+D1 N003 P001 1N5817
+D3 P002 N003 1N5817
+D4 N002 P002 1N5817
+L4 BaseBand N002 0.9m
+L5 N003 BaseBand 0.9m
+L6 0 Out 1.2m
+V1 RFIn 0 SINE(0 5 100e3) Rser=0.05
+V2 BaseBand 0 SINE(0 0.1 1e3) Rser=0.05
+R1 Out 0 50
+D2 P001 N002 1N5817
+.model D D
+.lib C:\Users\markd\Documents\LTspiceXVII\lib\cmp\standard.dio
+K2 L4 L5 L6 0.98
+K1 L1 L2 L3 0.98
+.tran 5m startup
+* This is from: https://www.youtube.com/watch?v=KBq0sblnHWs
+.backanno
+.end
