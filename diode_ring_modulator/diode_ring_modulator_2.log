@@ -2,20 +2,20 @@ Circuit: * C:\Projects\circuits_rf\diode_ring_modulator\diode_ring_modulator_2.a
 
 .OP point found by inspection.
 
-Date: Sat Jan 24 07:48:44 2026
-Total elapsed time: 1.413 seconds.
+Date: Sat Jan 24 12:35:38 2026
+Total elapsed time: 2.113 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 336395
-traniter = 336395
-tranpoints = 125129
-accept = 84788
-rejected = 40341
+totiter = 570235
+traniter = 570235
+tranpoints = 204618
+accept = 138606
+rejected = 66012
 matrix size = 17
 fillins = 16
 solver = Normal
-Matrix Compiler1:     118 opcodes  0.3/[0.1]/0.2
-Matrix Compiler2: 1.71 KB object code size  0.1/0.2/[0.1]
+Matrix Compiler1: 2.15 KB object code size  0.3/0.2/[0.2]
+Matrix Compiler2: off  [0.1]/0.2/0.1
 
