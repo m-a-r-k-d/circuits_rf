@@ -28,6 +28,9 @@ def calc_fmd_omd(fout):
     if d*fout < 600000000:
         d+=2
         
+    # d needs to be rounded up. I think this rounding might be done when 
+    # registers are written to in the rfzero code. I'm just using the Adafruit
+    # Si5351 package to write to the registers
     d = math.ceil(d)
     
     
