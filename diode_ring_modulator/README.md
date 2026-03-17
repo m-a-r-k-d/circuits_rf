@@ -11,7 +11,7 @@ I built the circuit after watching Youtube videos.
 
 ![Screenshot of LTSpice circuit](pics/LTSpice_circuit.png)
 
-The screenshot is updated from what I had been using originally. The inductance of the transformers was 1 mH, but I wound a transformer and measured the inductance from 1 - 50 MHZ using my NanoVNA, and the windoings are ~35 uH.  
+The screenshot is updated from what I had been using originally. The inductance of the transformers was 1 mH, but I wound a transformer and measured the inductance from 1 - 50 MHZ using my NanoVNA, and the windings are ~35 uH.  
 
 The simulation looks ok:  
 
