@@ -179,3 +179,10 @@ With the four new diodes the mixer is better according to the RSP1B "spectrum an
 
 It has about -29dB from the sidebands to the carrier, so the issue was that the diodes for the ring mixer #2 weren't matched very well.   
 This also shows that just using the diode measuring function of a DMM is good enough for selecting diodes for the mixer. Yay!
+
+![Picture](pics/diode_ring_mixer_num2.jpg)
+
+3-21-26
+I connected the nicrophone to the mixer. There is a problem in that the mixer basically shorts the mic output to ground. Maybe I need to make an op-amp buffer to make the input to the mixer look like a high impedance?
+
+I looked at the mixers that I've gotten from surplus shed, and I found their data sheets on line. They are Vari-L CM-1 mixers. I wonder if they are better than the ADE-6 that I bought from Amazon?
