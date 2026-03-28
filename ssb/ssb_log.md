@@ -182,7 +182,31 @@ This also shows that just using the diode measuring function of a DMM is good en
 
 ![Picture](pics/diode_ring_mixer_num2.jpg)
 
-3-21-26
-I connected the nicrophone to the mixer. There is a problem in that the mixer basically shorts the mic output to ground. Maybe I need to make an op-amp buffer to make the input to the mixer look like a high impedance?
+3-21-26  
+I connected the microphone to the mixer. There is a problem in that the mixer basically shorts the mic output to ground. Maybe I need to make an op-amp buffer to make the input to the mixer look like a high impedance? Or use an emitter follower as shown here: https://www.youtube.com/watch?v=1wMqNRvMUsY
+![Picture](pics/emitter_follower_as_buffer.png)
+
+
 
 I looked at the mixers that I've gotten from surplus shed, and I found their data sheets on line. They are Vari-L CM-1 mixers. I wonder if they are better than the ADE-6 that I bought from Amazon?
+
+I looked at the power output in the upper side band from the mixer. It looks like 0.002 mW, so only 2 uW (-27 dBm). This is why it makes sense to put an amplifier between the mixer output and the next mixer. I bought a Termination Insensitive Amplifier (TIA) for this purpose from Mostly DIY RF. (It's bidirectional, so I could use it in a transceiver at some point if I want to.)
+
+The Linear amplifier that I got from QRP Labs looks like it will amplify a -7dBm signal to 10W, so the output of the second mixer only needs to be -7dBm (0.2 mW). There's a plot in the pdf build documentation that shows the spectrum analyzer output. That plot shows that the TG is -7dBm. TG is Tracking Generator which is used to sweep the frequency of a spectrum analyzer when testing an amplifier.
+
+If I want to look at the output of this amplifier with the RSP1B, I'm going to need a pretty serious attenuator. I looked at amazon and a 50 W RF attenuator for -50 dB is about $35. Maybe get that? I can't find a 20W or 25 W 50dB attenuator.
+
+3-28-26
+I think I have the circuit that I can use so that the microphone will drive the coil on the mixer. It's an emitter follower with a 50 Ohm resistor in series with the inductor of the mixer. I measured the output of the microphone with the gain turned all the way down - minimum gain is with the pot on the mic board turned all the wa clockwise (as you're looking at the pot). When I talk into the mic, the peaks are about 100 mV.
+
+I modeled it in LTSpice. The schematic is called emitter_follower_mic_audio.asc.  
+![Picture](pics/emitter_follower_mic_audio.png)  
+
+I used 3e-6 Henries for the inductor since that's what I measured with the VNA - that was at 9 MHz though...  
+
+I made a spreadsheet to help pick the component values: emitter_follower_9MHz&1000kHz.ods. I followed the YouTube video whose link is above for help in designing it.  
+(I mistakenly designed if for 9 MHz, but then I remembered I needed it for the mic.)
+
+This is a current gain device. I can make LTSpice plot the voltage gain as a function of frequency, but I didn't do that for the current gain.  
+Instead, I just made a chart in that spreadsheet, where I ran the LTSpice simulation for 300 Hz and 1000Hz and I measured the currents and voltages off the plots. I think the results are ok.  
+

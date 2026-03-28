@@ -1,0 +1,20 @@
+Circuit: * C:\Projects\circuits_rf\ssb\audio_amp_mic.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Mar 28 12:12:24 2026
+Total elapsed time: 0.033 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 4
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 12
+fillins = 2
+solver = Normal
+Matrix Compiler1:      43 opcodes
+Matrix Compiler2: 954 bytes object code size

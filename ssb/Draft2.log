@@ -1,0 +1,21 @@
+Circuit: * C:\Projects\circuits_rf\ssb\Draft2.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Mar 28 10:30:50 2026
+Total elapsed time: 0.033 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 592
+traniter = 588
+tranpoints = 294
+accept = 286
+rejected = 8
+matrix size = 11
+fillins = 2
+solver = Normal
+Matrix Compiler1: 770 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 895 bytes object code size  0.1/0.2/[0.1]
+
